@@ -1,2 +1,13 @@
-node_modules
+node_modules/
+.env
+dist/
+build/
+.DS_Store
+npm-debug.log
+yarn-error.log
+.vscode/
+# frontend specifics
+frontend/node_modules/
+frontend/.env
+frontend/dist/node_modules
 .env
