@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  --main: #da4a4a;
+  --bg: #2d2d2d;
+  --user-bubble: #da4a4a;
+  --bot-bubble: #ffffff;
+  --text-main: #ffffff;
+  --text-bot: #000000;
+  --accent: #000000;
+  --pokeball-red: #da4a4a;
+  --pokeball-white: #ffffff;
+  --pokeball-black: #000000;
+}
+
+.App {
+  flex: 1;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  color: var(--text-main);
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background-image: url('./energyBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  height: 600px;
+  /* background-color: var(--main); */
+  background-image: linear-gradient(to bottom, var(--pokeball-red) 0%, var(--pokeball-red) 45%, var(--pokeball-black) 45%, var(--pokeball-black) 55%, var(--pokeball-white) 55%, var(--pokeball-white) 100%);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: var(--bg);
+  border-radius: 8px 8px 0 0;
+  border: 2px solid var(--pokeball-black);
+
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin-bottom: 0.5rem;
+  padding: 0rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.95rem;
+}
+
+.message-tokens {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  align-self: flex-end;
+  color: var(--text-subtle);
+  margin-bottom: 0.25rem;
+}
+
+.user-message {
+  background-color: var(--user-bubble);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.bot-message {
+  background-color: var(--bot-bubble);
+  color: var(--text-bot);
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.system-message {
+  padding: 0.5rem;
+  background-color: var(--bot-bubble);
+  color: var(--text-bot);
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.input-container {
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  flex-direction: row;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-top: 2px solid var(--pokeball-black);
+  border-left: 2px solid var(--pokeball-black);
+  border-bottom: 2px solid var(--pokeball-black);
+  border-radius: 0 0 0 8px;
+  font-size: 1rem;
+}
+
+.send-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--main);
+  color: white;
+  border: none;
+  border-right: 2px solid var(--pokeball-black);
+  border-bottom: 2px solid var(--pokeball-black);
+  border-top: 2px solid var(--pokeball-black);
+  border-radius: 0 0 8px 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.message-tools {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  align-self: center;
+  color: var(--text-subtle);
+}
+
+.tools {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-main);
+  background-color: var(--accent);
+}
+
+.message-image-container {
+  margin-top: 0.5rem;
+}
+
+.message-image {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
